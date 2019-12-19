@@ -1,0 +1,72 @@
+<%- include('partials/header'); %>
+
+<div class="container userProfileEdit">
+	<div class="col-lg-12">
+			<div class="form">
+				<header>
+					Edit Your Profile
+				</header>
+				<%  if(typeof errors != 'undefined'){ %>
+					<div class="alert alert-danger"><%= errors %></div>
+				<% } %>
+				<%  if(typeof success != 'undefined'){ %>
+					<div class="alert alert-success"><%= success %></div>
+				<% } %>
+				<form action="/employee/profile/edit" method="POST" enctype="multipart/form-data">
+					<section>
+						<div class="form-group imgDiv">
+							<%  if(typeof session.image == 'undefined'){ %>
+							<img src="images/user.jpg" class="img-fluid" id="imageOpener" />
+							<% }else{ %>
+							<img src="images/users/<%= session.image %>" class="img-fluid" id="imageOpener" />
+							<% } %>
+							<input type="file" name="image" id="image">
+						</div>
+						<div class="form-group">
+							<label for="name">Change you name</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="<%= session.name %>" />
+						</div>
+						<div class="form-group">
+							<label for="phone">Change you phone number</label>
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number" value="<%= session.phone %>" />
+						</div>
+						<div class="form-group">
+							<label for="tagline">you Tag line</label>
+							<input type="text" class="form-control" id="tagline" name="tagline" placeholder="Enter Tagline" value="<%= session.tagline %>" />
+						</div>
+						<div class="form-group">
+							<label for="desc">Description</label>
+							<textarea class="form-control" id="desc" name="description" placeholder="Enter Work Description" value="<%= session.description %>" /><%= session.description %></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-info">Update</button>
+						</div>
+						<br><br>
+					</section>
+				</form>
+				<form action="/user/profile/edit-password" method="POST">
+					<section>
+						<div class="form-group">
+							<label for="old">Enter old password</label>
+							<input type="text" class="form-control" id="old" name="old" placeholder="Enter old password" />
+						</div>
+						<div class="form-group">
+							<label for="pass1">Enter new password</label>
+							<input type="text" class="form-control" id="pass1" name="pass1" placeholder="Enter new password" />
+						</div>
+						<div class="form-group">
+							<label for="pass2">Re enter new password</label>
+							<input type="text" class="form-control" id="pass2" name="pass2" placeholder="Re Enter password" />
+						</div>
+						<div class="form-group">
+							<button class="btn btn-info">Upadte</button>
+						</div>
+						<br><br>
+					</section>
+				</form>
+			</div>
+		</form>
+	</div>
+</div>
+
+<%- include('partials/footer'); %>

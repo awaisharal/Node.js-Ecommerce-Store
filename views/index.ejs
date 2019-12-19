@@ -1,0 +1,193 @@
+<%- include('partials/header'); %>
+<% if(typeof Usercheck != "undefined"){ if(UserCheck.role == "1"){ %>
+	<script>window.open("/employee/profile", "_self")</script>
+<% } } %>
+	<div class="banner">
+		<div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
+		<div class="container fill_height">
+			<div class="row fill_height">
+				<div class="banner_product_image"><img src="http://www.pngmart.com/files/7/Groceries-Transparent-Images-PNG.png" class="img-fluid" style="width: 500px;margin-top: 145px;"></div>
+				<div class="col-lg-6 offset-lg- fill_height">
+					<div class="banner_content">
+						<h1 class="banner_text">We Are Available</h1>
+						<div class="banner_price">
+							( WAA ) has been serving Pakistani’s with quality and genuine items for over a decade now. Whatever you want, we have it. To ensure you get the best with the least of hassles, last year, we launched our Grocery delivery services in Lahore and Islamabad, this year, we are back with everything else, from phones to stationery, from fashion to beauty, we will deliver everything, everywhere.
+						</div>
+						<div class="button banner_button"><a href="shop">Shop Now</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Characteristics -->
+	<div class="characteristics">
+		<div class="container">
+			<div class="row">
+				<!-- Char. Item -->
+				<div class="col-lg-3 col-md-6 char_col">
+					
+					<div class="char_item d-flex flex-row align-items-center justify-content-start">
+						<div class="char_icon"><img src="images/char_1.png" alt=""></div>
+						<div class="char_content">
+							<div class="char_title">Free Delivery</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Char. Item -->
+				<div class="col-lg-3 col-md-6 char_col">
+					
+					<div class="char_item d-flex flex-row align-items-center justify-content-start">
+						<div class="char_icon"><img src="images/char_2.png" alt=""></div>
+						<div class="char_content">
+							<div class="char_title">Best Quality</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Char. Item -->
+				<div class="col-lg-3 col-md-6 char_col">
+					
+					<div class="char_item d-flex flex-row align-items-center justify-content-start">
+						<div class="char_icon"><img src="images/char_3.png" alt=""></div>
+						<div class="char_content">
+							<div class="char_title">Money Back Guarantee</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Char. Item -->
+				<div class="col-lg-3 col-md-6 char_col">
+					
+					<div class="char_item d-flex flex-row align-items-center justify-content-start">
+						<div class="char_icon"><img src="images/char_4.png" alt=""></div>
+						<div class="char_content">
+							<div class="char_title">Fast Service</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Deals of the week -->
+
+	<div class="deals_featured">
+		<div class="container">
+			<div class="row">
+				<div class="col d-flex flex-lg-row flex-column align-items-center justify-content-start">
+					<!-- Featured -->
+					<div class="featured" style="width: 100%;">
+						<div class="tabbed_container">
+							<div class="tabs">
+								<ul class="clearfix">
+									<li class="active">Featured</li>
+								</ul>
+								<div class="tabs_line"><span></span></div>
+							</div>	
+							<div class="clearfix"></div>
+							<div class="col-lg-12 productsALL">
+								<div class="row">
+									<% products.forEach(function(product){  %>
+									<div class="col-lg-3">
+										<div class="productBox">
+											<a href="/product/<%= product._id %>">
+												<img src="uploadedFiles/<%= product.image_name %>" class="img-fluid" alt="Product">
+											</a>
+											<div class="price"><%= product.price %></div>
+											<a href="/product/<%= product._id %>">
+												<div class="title"><%= product.name %></div>
+											</a>
+											<div class="cart">
+												<a href="/add-to-cart/<%= product._id %>">
+													<button class="btn btn-primary btn-block">Add to Cart</button>
+												</a>
+											</div>
+										</div>
+									</div>
+									<% }); %>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<br><br>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Super Offers -->
+	
+	<div class="container-fluid superOffers">
+		<div class="col-lg-12">
+			<div class="tabs clearfix tabs-right">
+				<div class="new_arrivals_title">Super Offers</div>
+				<div class="tabs_line"><span></span></div>
+			</div>
+		</div>
+		<div class="col-lg-12" style="margin-top: 40px;">
+			<div class="row">
+				<div class="col-lg-4">
+					<a href="/shop">
+						<img src="images/superOffer-1.jpg" class="img-fluid" />
+					</a>
+				</div>
+				<div class="col-lg-4">
+					<a href="/shop">
+						<img src="images/superOffer-3.jpg"  style="height: 200px;width:100%;" class="img-fluid" />
+					</a>
+					<a href="/shop">
+						<img src="images/superOffer-2.jpg"  style="margin-top:13px;height: 200px;width:100%;" class="img-fluid" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Advertisment -->
+	
+	<div class="container-fluid superOffers">
+		<div class="col-lg-12">
+			<div class="tabs clearfix tabs-right">
+				<div class="new_arrivals_title">Advertisments</div>
+				<div class="tabs_line"><span></span></div>
+			</div>
+		</div>
+		<div class="col-lg-12" style="margin-top: -50px;">
+			<div class="banner">
+				<img src="images/ad-1.jpg" alt="">
+			</div>			
+		</div>
+	</div>
+
+	<!-- Banner 2 -->
+
+	<div class="trends">
+		<div class="trends_background" style="background-image:url(images/trends_background.jpg)"></div>
+		<div class="trends_overlay"></div>
+		<div class="container">
+			<div class="row">
+
+				<!-- Trends Content -->
+				<div class="col-lg-4">
+					<div class="trends_container ">
+						<h2 class="trends_title" style="width: 100%!important;">Best Quality</h2>
+						<div class="trends_text"><p>Freshness you can taste! Quality you can trust.</p></div>
+						<div class="shopNowBtn">
+							<a href="/shop">
+								<button class="btn btn-info">Shop Now</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<%- include('partials/footer'); %>

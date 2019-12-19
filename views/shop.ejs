@@ -1,0 +1,73 @@
+<%- include('partials/header'); %>
+<% if(typeof Usercheck != "undefined"){ if(UserCheck.role == "1"){ %>
+	<script>window.open("/employee/profile", "_self")</script>
+<% } } %>
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/shop_background.jpg"></div>
+		<div class="home_overlay"></div>
+		<div class="home_content d-flex flex-column align-items-center justify-content-center">
+			<h2 class="home_title">Shop</h2>
+		</div>
+	</div>
+
+	<!-- Shop -->
+
+	<div class="shop">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+
+					<!-- Shop Sidebar -->
+					<div class="shop_sidebar">
+						<div class="sidebar_section">
+							<div class="sidebar_title">Categories</div>
+							<ul class="sidebar_categories">
+								<% categories.forEach(function(category){ %>
+								<li><a href="/product/category/<%= category._id %>"><%= category.name %></a></li>
+								<% }); %>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-lg-9">
+					
+					<!-- Shop Content -->
+
+					<div class="shop_content">
+						<div class="shop_bar clearfix">
+							<div class="shop_product_count"><span>Our</span> Shop</div>
+						</div>
+
+						<div class="col-lg-12 productsALL">
+							<div class="row">
+								<% results.forEach(function(product){  %>
+								<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+									<div class="productBox">
+										<a href="/product/<%= product._id %>">
+											<img src="uploadedFiles/<%= product.image_name %>" class="img-fluid" alt="Product">
+										</a>
+										<div class="price"><%= product.price %></div>
+										<a href="/product/<%= product._id %>">
+											<div class="title"><%= product.name %></div>
+										</a>
+										<div class="cart">
+											<a href="/add-to-cart/<%= product._id %>">
+												<button class="btn btn-primary btn-block">Add to Cart</button>
+											</a>
+										</div>
+									</div>
+								</div>
+								<% }); %>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<%- include('partials/footer'); %>

@@ -1,0 +1,50 @@
+<%- include('partials/header'); %>
+
+<div class="container userProfile">
+	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-3 profilePicDiv">
+				<% if(typeof session.image == "undefined"){ %>
+					<img src="images/user.jpg" class="img-fluid profilePic" />
+				<% }else{ %>
+					<img src="images/users/<%= session.image %>" class="img-fluid profilePic" />
+				<% } %>
+			</div>
+			<div class="col-lg-9 userDetails">
+				<h3 class="name"><%= session.name %> <span class="tagline">( <%= session.tagline %> )</span></h3>
+				<p class="employeeRate"><i class="fab fa-bitcoin"></i> Pkr. 200/hr</p>
+				<p class="email"><i class="fa fa-envelope"></i>&nbsp; <%= session.email %></p>
+				<% if(typeof session.phone != 'undefined'){ %>
+				<p class="phone"><i class="fa fa-phone"></i>&nbsp; <%= session.phone %></p>
+				<% } %>
+				<p class="description"><%= session.description %></p>
+				<a href="/employee/profile/edit">
+					<button class="editProfileBtn">Edit Info</button>
+				</a>
+			</div>
+		</div>
+		<div class="clearfix">
+			<br><br><br>
+		</div>
+	</div>
+
+	<div class="col-lg-12 ordersDiv">
+			<% if(hires != "" ){ %>
+			<h3>All Orders</h3>
+			<% } %>
+			<div class="products">
+				<% var i = 1; if(hires == "" ){ %>
+					<div class="alert alert-info noOrder">No orders yet</div>
+				<%  }else{ hires.forEach(function(hire){  %>
+				<div class="product"><!-- product-->
+					
+					<form action="/user/<%= hire.userEmail %>" method="POST">
+						<button class="titleOrder" style="background:none;border:none;outline:none;"><span><%= i; %> - </span> New order from <i><b><%= hire.userName %></b></i></button>
+					</form>
+				</div>
+				<% i++; }); } %>
+			</div>
+		</div>
+</div>
+
+<%- include('partials/footer'); %>

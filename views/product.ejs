@@ -1,0 +1,40 @@
+<%- include('partials/header'); %>
+<% if(typeof Usercheck != "undefined"){ if(UserCheck.role == "1"){ %>
+	<script>window.open("/employee/profile", "_self")</script>
+<% } } %>
+	<!-- Single Product -->
+
+	<div class="single_product">
+		<div class="container">
+			<div class="row">
+
+				<!-- Images -->
+				<div class="col-lg-4 order-lg-1 order-2">
+					<ul class="image_list">
+						<li data-image="images/single_4.jpg"><img src="uploadedFiles/<%= product.image_name %>" class="img-fluid"></li>
+					</ul>
+				</div>
+
+
+				<div class="col-lg-5 order-3">
+					<div class="product_description">
+						<div class="product_category">Product details</div>
+						<div class="product_name"><%= product.name %></div>
+						<p style="color: green;"><strong><%= product.stock %></strong> in Stock</p>
+						<div class="product_text"><p><%= product.description %></p></div>
+						<div class="order_info ">
+							<div class="product_price">Pkr. <%= product.price %></div>
+							<div class="button_container">
+								<a href="/add-to-cart/<%= product._id %>">
+									<button class="btn btn-primary ">Add to Cart</button>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<%- include('partials/footer'); %>

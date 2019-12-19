@@ -1,0 +1,18 @@
+<%- include("partials/header"); %>
+<% if(UserCheck.role == "1"){ %>
+	<script>window.open("/employee/profile", "_self")</script>
+<% } %>
+
+	<div class="container text-center thanks">
+	  <h1 class="display-3">Thank You!</h1>
+	  <p class="lead"><strong>for you order.</strong> </p>
+	  <hr>
+	  <p>
+	    Having trouble? <a href="/contact">Contact us</a>
+	  </p>
+	  <p class="lead">
+	    <a class="btn btn-primary btn-sm" href="/" role="button">Continue to homepage</a>
+	  </p>
+	</div>
+
+<%- include("partials/footer"); %>

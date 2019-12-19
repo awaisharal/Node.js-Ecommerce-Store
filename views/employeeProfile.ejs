@@ -1,0 +1,41 @@
+<%- include('partials/header'); %>
+
+<div class="container userProfile">
+	<div class="col-lg-12">
+		<% user.forEach(function(u){ %>
+		<div class="row">
+			<div class="col-lg-3 profilePicDiv">
+
+				<% if(typeof u.image == "undefined"){ %>
+					<img src="images/user.jpg" class="img-fluid profilePic" />
+				<% }else{ %>
+					<img src="images/users/<%= u.image %>" class="img-fluid profilePic" />
+				<% } %>
+			</div>
+			<div class="col-lg-9 userDetails">
+				<% if(typeof success != "undefined"){ %>
+					<div class="alert alert-success">
+						Employee Hired! He will reach on your desired location
+					</div>
+					
+				<% } %>
+				<h3 class="name"><%= u.name %> <span class="tagline">( <%= u.tagline %> )</span></h3>
+				<p class="employeeRate"><i class="fab fa-bitcoin"></i> Pkr. 200/hr</p>
+				<p class="email"><i class="fa fa-envelope"></i>&nbsp; <%= u.email %></p>
+				<% if(typeof u.phone != 'undefined'){ %>
+				<p class="phone"><i class="fa fa-phone"></i>&nbsp; <%= u.phone %></p>
+				<% } %>
+				<p class="description"><%= u.description %></p>
+				<form action="/employee/hire/<%= u._id %>" method="POST">
+					<button class="btn btn-info btn-hireMe" name="userID" value="<%= UserCheck._id; %>">Hire Me</button>
+				</form>
+			</div>
+		</div>
+		<% }); %>
+		<div class="clearfix">
+			<br><br><br>
+		</div>
+	</div>
+</div>
+
+<%- include('partials/footer'); %>

@@ -1,0 +1,219 @@
+.productsALL{
+	margin-top:30px!important;
+}
+.productBox{
+	width: 100%;
+	text-align: center;
+	font-family: Inherit;
+	margin-top: 30px;
+	padding-top: 40px;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.productBox:hover{
+	box-shadow: 2px 2px 5px 2px #eee;
+
+}
+.productBox img{
+	height: 100px;
+}
+
+.productBox .price{
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 15px;
+}
+.productBox .title{
+	font-size: 15px;
+
+}
+.productBox .cart button{
+	margin-top: 40px;
+	border-radius: 0px!important;
+	cursor: pointer;
+	
+}
+.userProfile{
+	padding-top: 150px;
+}
+.userProfile .profilePicDiv{
+}
+.userProfile img.profilePic{
+	border: 1px solid #eee;
+}
+.userProfile .userDetails{
+	padding-top: 10px;
+}
+.userProfile .userDetails .name{
+	font-size:19px;
+
+}
+.userProfile .ordersDiv{
+	padding-top: 70px;
+	padding-bottom: 130px;
+}
+.userProfile .ordersDiv .products {
+	margin-top: 20px;
+}
+.userProfile .ordersDiv .product {
+	margin-top: 10px;
+}
+.userProfile .ordersDiv .product a{
+	color: #555;
+}
+.userProfile .ordersDiv .product a.title{
+	margin-left: 30px;
+}
+.editProfileBtn{
+	background: #0E8CE4;
+	color: #fff;
+	border:1px solid #0E8CE4;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+.editProfileBtn:hover{
+	opacity: 0.8;
+}
+.userProfileEdit .form{
+	width: 350px;
+	height: auto;
+	background: #fff;
+	margin:0 auto;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	border:1px solid #eee;
+	padding-bottom: 30px;
+}
+.userProfileEdit .form header{
+	font-size: 22px;
+	background: #0E8CE4;
+	color: #fff;
+	padding-left: 20px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.userProfileEdit .form section{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.userProfileEdit .form section .imgDiv{
+	text-align: center;
+	margin-top: 20px;
+
+}
+.userProfileEdit .form section .imgDiv img{
+	width: 150px;
+	border-radius: 50%;
+	padding: 5px;
+	border:2px solid #0E8CE4;
+	cursor: pointer;
+}
+.userProfileEdit .form section .imgDiv #image{
+	display: none;
+}
+.userProfileEdit .form section input, .userProfileEdit .form section textarea{
+	box-shadow: none!important;
+	outline: none!important;
+	border-radius: 0!important;
+	border:1px solid #ccc;
+	font-size: 15px;
+}
+.userProfileEdit .form section button{
+	background: #0E8CE4;
+	color: #fff;
+	border:1px solid #0E8CE4;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	border-radius:0;
+	float: right;
+	cursor: pointer;
+}
+.userProfileEdit .form section button:hover{
+	opacity: 0.8;
+}
+.userDetails .tagline{
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+}
+.userDetails .description{
+	font-size: 16px;
+	width: 70%;
+}
+.userData{
+	text-align: center;
+	box-shadow: 1px 1px 5px 1px #ccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 30px;
+	border-radius: 5px;
+}
+.userData img{
+	width: 150px;
+	border-radius: 50%;
+	padding:3px;
+	border:1px solid #0E8CE4;
+}
+.userData .name{
+	font-size: 16px;
+	margin-top: 20px;
+}
+.userData .tagline{
+	font-size: 15px;
+
+}
+.employees{
+	padding-bottom: 60px;
+}
+.userData a{
+	color: #333;
+}
+.btn-hireMe{
+	background: #0E8CE4;
+	color: #fff;
+	border:1px solid #0E8CE4;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	border-radius: 3px;	
+}
+.employeeRate{
+	font-size: 17px;
+	letter-spacing: 2px;
+	font-style: italic;
+}
+.thanks{
+	padding-top:100px;
+	padding-bottom:100px;
+}
+.superOffers{
+	/*margin-top: 100px;*/
+	padding-top:100px;
+	padding-left:100px;
+	padding-right:100px;
+}
+.shopNowBtn button{
+	border-radius: 0!important;
+	background: #0E8CE4;
+	color: #fff;
+	outline: none!important;
+	cursor: pointer;
+	padding-left: 40px;
+	padding-right: 40px;
+	border:1px solid #0E8CE4;
+	margin-top:20px;
+}
+.banner_price{
+	color: #333;
+	font-size: 16px;
+	margin-top: 40px;
+}
