@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"fyp.categories"}],"uuid":"421c284947724e24ac9f57b86bded6d1"}
